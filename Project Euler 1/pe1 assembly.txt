@@ -1,0 +1,60 @@
+store 5 //b
+copy a to d
+store 0
+copy d to ram //e
+store 3 //b
+copy a to d
+store 1
+copy d to ram //e
+store 0 //b
+copy a to d
+store 2
+copy d to ram //e
+store 1 //b
+copy a to d
+store 3
+copy d to ram //e
+store 300 //b
+copy a to d
+store 4
+copy d to ram //e
+store 3 //b: main loop start
+copy ram to d //e
+store 0 //b divide by 5 loop
+subtract d-ram to d
+store 23
+copy d, j:gt //e
+store 1000 //b
+copy d, j:e //e
+store 3 //b: load test num into d
+copy ram to d //e
+store 1 //b divide by 3 loop
+subtract d-ram to d
+store 31
+copy d, j:gt //e
+store 100 //b
+copy d, j:e //e
+store 3 //b (return from j->100)
+increment ram to ram //e
+copy ram to d
+store 4 //b
+subtract d-ram to d
+store 21
+copy d, j:lt //e
+store 2 //b
+copy ram to d
+copy d to a //e
+store 160
+copy d, j: gt lt eq
+
+//start following at pc=100:
+store 3 //b
+copy ram to d //e
+store 2 //b
+add d+ram to ram //e
+store 37 //b
+copy d, j: gt lt eq //e
+
+start at pc=160 (a0)
+store 0
+store 0

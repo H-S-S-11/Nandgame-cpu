@@ -1,0 +1,100 @@
+{C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/condition.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/condition.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity condition
+-- Compiling architecture sens of condition
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/instruction_decoder.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/instruction_decoder.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity decoder
+-- Compiling architecture sel of decoder
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/cpu.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/cpu.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity cpu
+-- Compiling architecture structure of cpu
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/unary_alu.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/unary_alu.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity unary_alu
+-- Compiling architecture rtl of unary_alu
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/full_adder.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/full_adder.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity full_adder
+-- Compiling architecture addition of full_adder
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/pe1_rom.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/pe1_rom.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity program_engine
+-- Compiling architecture mem_array of program_engine
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/control_unit.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/control_unit.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity control_unit
+-- Compiling architecture cu of control_unit
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/counter.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/counter.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity counter
+-- Compiling architecture count_arch of counter
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/combined_memory.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/combined_memory.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture combined_memory of memory
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/test/cpu_run.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/test/cpu_run.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity testbench
+-- Compiling architecture tb of testbench
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/alu.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/alu.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity alu
+-- Compiling architecture rtl of alu
+
+} {} {}} {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/16_bit_adder.vhd} {1 {vcom -work work -2008 -explicit -stats=none {C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/16_bit_adder.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity add_16
+-- Compiling architecture add of add_16
+
+} {} {}}

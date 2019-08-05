@@ -1,0 +1,562 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+Eadd_16
+Z0 w1562191646
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Harry Snell/Desktop/Work/16 bit CPU
+Z4 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/16_bit_adder.vhd
+Z5 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/16_bit_adder.vhd
+l0
+L7
+VR;CKN:YOTDLlKYM:]Cb_j3
+!s100 ohW^=9c1PH4nSJ_KH`6^D1
+Z6 OP;C;10.4a;61
+33
+Z7 !s110 1564942115
+!i10b 1
+Z8 !s108 1564942115.000000
+Z9 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/16_bit_adder.vhd|
+Z10 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/16_bit_adder.vhd|
+!i113 1
+Z11 o-work work -2008 -explicit -O0
+Z12 tExplicit 1
+Aadd
+R1
+R2
+DEx4 work 6 add_16 0 22 R;CKN:YOTDLlKYM:]Cb_j3
+l34
+L18
+V<g@Y@J?>N`OU3ilCXji8[2
+!s100 <QF3]O22_^bj4Q=Bl2Rl61
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ealu
+Z13 w1563695381
+R1
+R2
+R3
+Z14 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/alu.vhd
+Z15 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/alu.vhd
+l0
+L19
+V??Dn]6IN[CSoH=EH@1ICE1
+!s100 X?Wl5YzT?c2Y7RhzD:89S0
+R6
+33
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/alu.vhd|
+Z17 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/alu.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 3 alu 0 22 ??Dn]6IN[CSoH=EH@1ICE1
+l64
+L35
+V:X5?FLng11I]3o57C1aje1
+!s100 [`7K9]a<iSVSzbk0m_DlF3
+R6
+33
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Eand_gate
+Z18 w1564938410
+R1
+R2
+R3
+Z19 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/and_gate.vhd
+Z20 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/and_gate.vhd
+l0
+L4
+Vl0iZXN5=T]4o>aL>WUYz80
+!s100 RPm?=dAf4RjUeHI3eFcMi2
+R6
+32
+Z21 !s110 1564938446
+!i10b 1
+Z22 !s108 1564938446.000000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/and_gate.vhd|
+Z24 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/and_gate.vhd|
+!i113 1
+Z25 o-work work -2002 -explicit -O0
+R12
+Artl
+R1
+R2
+DEx4 work 8 and_gate 0 22 l0iZXN5=T]4o>aL>WUYz80
+l14
+L12
+V35b9J8K]?3cCP6;OQ<[4o0
+!s100 4GWB1h@:cQXNK9GWGLB_I2
+R6
+32
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R25
+R12
+Eand_gate_tb
+Z26 w1564938437
+R1
+R2
+R3
+Z27 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/and_gate_tb.vhd
+Z28 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/and_gate_tb.vhd
+l0
+L4
+V6@XTiUP^UAbzgQliOoQ]i2
+!s100 9SASH?ZdNXc5<eK`=d0Y33
+R6
+32
+R21
+!i10b 1
+R22
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/and_gate_tb.vhd|
+Z30 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/and_gate_tb.vhd|
+!i113 1
+R25
+R12
+Abehave
+R1
+R2
+DEx4 work 11 and_gate_tb 0 22 6@XTiUP^UAbzgQliOoQ]i2
+l19
+L7
+V8QkZ5X?@ei4GCLD=VcAmE1
+!s100 f=mTY4DkD14hgXf6C6Oz^1
+R6
+32
+R21
+!i10b 1
+R22
+R29
+R30
+!i113 1
+R25
+R12
+Econdition
+Z31 w1564777915
+R1
+R2
+R3
+Z32 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/condition.vhd
+Z33 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/condition.vhd
+l0
+L10
+VTDKhd_[7k0m]L8Fj_Zb633
+!s100 T]?S@]3RHUX;FnGcZ@NLb1
+R6
+33
+R7
+!i10b 1
+R8
+Z34 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/condition.vhd|
+Z35 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/condition.vhd|
+!i113 1
+R11
+R12
+Asens
+R1
+R2
+DEx4 work 9 condition 0 22 TDKhd_[7k0m]L8Fj_Zb633
+l25
+L22
+Vj]K``1=2_W=o<FDKkb>YO3
+!s100 [9h5:RUh8E?[Laa<AaiLO1
+R6
+33
+R7
+!i10b 1
+R8
+R34
+R35
+!i113 1
+R11
+R12
+Econtrol_unit
+Z36 w1564869548
+R1
+R2
+R3
+Z37 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/control_unit.vhd
+Z38 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/control_unit.vhd
+l0
+L9
+Vj=HcJFl8UDU`[diO=19751
+!s100 KDO?6c64^n83PC6nJ<96C3
+R6
+33
+R7
+!i10b 1
+R8
+Z39 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/control_unit.vhd|
+Z40 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/control_unit.vhd|
+!i113 1
+R11
+R12
+Acu
+R1
+R2
+DEx4 work 12 control_unit 0 22 j=HcJFl8UDU`[diO=19751
+l122
+L19
+VfHS?CN5EhhL2V>K`iQIfX2
+!s100 be^FW2D<N=f6Zb<[`2BWz1
+R6
+33
+R7
+!i10b 1
+R8
+R39
+R40
+!i113 1
+R11
+R12
+Ecounter
+Z41 w1564906485
+R1
+R2
+R3
+Z42 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/counter.vhd
+Z43 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/counter.vhd
+l0
+L7
+VLHAb@`WK0]OPzBn<A69b_0
+!s100 =Xi`l3:>IHEbFZ5Mj>aGX1
+R6
+33
+Z44 !s110 1564942116
+!i10b 1
+R8
+Z45 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/counter.vhd|
+Z46 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/counter.vhd|
+!i113 1
+R11
+R12
+Acount_arch
+R1
+R2
+DEx4 work 7 counter 0 22 LHAb@`WK0]OPzBn<A69b_0
+l33
+L18
+VEYdmMQk=A5kfW6f>8Ozb40
+!s100 ^[jZ9A@U<gz=Y[@fYiK;<1
+R6
+33
+R44
+!i10b 1
+R8
+R45
+R46
+!i113 1
+R11
+R12
+Ecpu
+Z47 w1564933934
+R1
+R2
+R3
+Z48 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/cpu.vhd
+Z49 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/cpu.vhd
+l0
+L8
+V1ZSRj3n3`L`h3mG0GZJV?0
+!s100 14nj@XHnk26NO=EeK=3G:0
+R6
+33
+R44
+!i10b 1
+Z50 !s108 1564942116.000000
+Z51 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/cpu.vhd|
+Z52 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/cpu.vhd|
+!i113 1
+R11
+R12
+Astructure
+R1
+R2
+DEx4 work 3 cpu 0 22 1ZSRj3n3`L`h3mG0GZJV?0
+l43
+L17
+VHk73kCR2?gz7QgY`5jQc60
+!s100 RANZYHL:YOc_>PfSi^bmA2
+R6
+33
+R44
+!i10b 1
+R50
+R51
+R52
+!i113 1
+R11
+R12
+Edecoder
+Z53 w1564772847
+R1
+R2
+R3
+Z54 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/instruction_decoder.vhd
+Z55 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/instruction_decoder.vhd
+l0
+L9
+VBWQ``mDikoFHa<I7VI3Vz1
+!s100 KQ;Z9f0[9QW7cZKj8Gj:^1
+R6
+33
+R44
+!i10b 1
+R50
+Z56 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/instruction_decoder.vhd|
+Z57 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/instruction_decoder.vhd|
+!i113 1
+R11
+R12
+Asel
+R1
+R2
+DEx4 work 7 decoder 0 22 BWQ``mDikoFHa<I7VI3Vz1
+l38
+L36
+V]]K7HOfb03LjS6nf7`[bC0
+!s100 FBEAAG241;zIkoCmMN[QD1
+R6
+33
+R44
+!i10b 1
+R50
+R56
+R57
+!i113 1
+R11
+R12
+Efull_adder
+R0
+R1
+R2
+R3
+Z58 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/full_adder.vhd
+Z59 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/full_adder.vhd
+l0
+L6
+V^M5HokOE]K;23WZZm?c7l0
+!s100 boJ7bjFmO;:6oFE::cPX[1
+R6
+33
+R44
+!i10b 1
+R50
+Z60 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/full_adder.vhd|
+Z61 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/full_adder.vhd|
+!i113 1
+R11
+R12
+Aaddition
+R1
+R2
+DEx4 work 10 full_adder 0 22 ^M5HokOE]K;23WZZm?c7l0
+l21
+L17
+Ve1`>Ca@glTfWFjh<inUVz2
+!s100 L:=RbQfMJ=bY_QlnWMH^20
+R6
+33
+R44
+!i10b 1
+R50
+R60
+R61
+!i113 1
+R11
+R12
+Ememory
+Z62 w1563743283
+Z63 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z64 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/combined_memory.vhd
+Z65 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/combined_memory.vhd
+l0
+L9
+VjXIh2dHAGkW:51[>28ZYI0
+!s100 ^Q=f4CzUQmeccoaQ;<fo]3
+R6
+33
+R7
+!i10b 1
+R8
+Z66 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/combined_memory.vhd|
+Z67 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/combined_memory.vhd|
+!i113 1
+R11
+R12
+Acombined_memory
+R63
+R1
+R2
+DEx4 work 6 memory 0 22 jXIh2dHAGkW:51[>28ZYI0
+l30
+L24
+V<c[fXkbG6VVn5?[DZ5ma52
+!s100 SU^6TAU2lKQGmJCIzbUJk2
+R6
+33
+R7
+!i10b 1
+R8
+R66
+R67
+!i113 1
+R11
+R12
+Eprogram_engine
+Z68 w1564942110
+R63
+R1
+R2
+R3
+Z69 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/pe1_rom.vhd
+Z70 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/pe1_rom.vhd
+l0
+L10
+V0:Gca=<c]T3=LN5zj0nQf2
+!s100 OYWAdX3g5@fbAP]k`9`7`3
+R6
+33
+R44
+!i10b 1
+R50
+Z71 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/pe1_rom.vhd|
+Z72 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/pe1_rom.vhd|
+!i113 1
+R11
+R12
+Amem_array
+R63
+R1
+R2
+DEx4 work 14 program_engine 0 22 0:Gca=<c]T3=LN5zj0nQf2
+l38
+L21
+VDbX1EfjRTB3eVSR;`8WMe1
+!s100 S`_Ohgj4<XXGkRN3]j5Kh2
+R6
+33
+R44
+!i10b 1
+R50
+R71
+R72
+!i113 1
+R11
+R12
+Etestbench
+Z73 w1564939064
+R63
+R1
+R2
+R3
+Z74 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/test/cpu_run.vhd
+Z75 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/test/cpu_run.vhd
+l0
+L8
+V0Rk>H@fXRcV8WBhSJaQE31
+!s100 M64oB24iz@ozGRGD>lfhX1
+R6
+33
+R44
+!i10b 1
+R50
+Z76 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/test/cpu_run.vhd|
+Z77 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/test/cpu_run.vhd|
+!i113 1
+R11
+R12
+Atb
+R63
+R1
+R2
+Z78 DEx4 work 9 testbench 0 22 0Rk>H@fXRcV8WBhSJaQE31
+l27
+L12
+Z79 VRN[nBOC]LegO6<ZJeXK5N2
+Z80 !s100 JUQTKKDfm[aoIjHB:53A]0
+R6
+33
+R44
+!i10b 1
+R50
+R76
+R77
+!i113 1
+R11
+R12
+Eunary_alu
+Z81 w1563618159
+R1
+R2
+R3
+Z82 8C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/unary_alu.vhd
+Z83 FC:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/unary_alu.vhd
+l0
+L11
+VRGHecI`Bc1VX3_`4XkXT22
+!s100 Ui0n7?_^K=9SFOc;jXg>a3
+R6
+33
+R44
+!i10b 1
+R50
+Z84 !s90 -reportprogress|300|-work|work|-2008|-explicit|-stats=none|C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/unary_alu.vhd|
+Z85 !s107 C:/Users/Harry Snell/Desktop/Work/16 bit CPU/rtl/unary_alu.vhd|
+!i113 1
+R11
+R12
+Artl
+R1
+R2
+DEx4 work 9 unary_alu 0 22 RGHecI`Bc1VX3_`4XkXT22
+l25
+L21
+VQZm0Z134Vme_=`dl:o_6b3
+!s100 [ijQfB=d_Y_>0V8_RnYBn1
+R6
+33
+R44
+!i10b 1
+R50
+R84
+R85
+!i113 1
+R11
+R12
