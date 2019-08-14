@@ -1,0 +1,13 @@
+# folders to ignore
+db
+incremental_db
+output_files
+simulation
+work
+
+# file types to ignore
+*.qws
+*.wlf
+*.txt
+*.qpf
+*.qsf
