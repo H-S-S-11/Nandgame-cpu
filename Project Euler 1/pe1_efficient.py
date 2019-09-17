@@ -14,12 +14,12 @@ while (test_num<100):
 test_num = 0
 
 while (test_num < 95):
-    test_num += 5
     divide_by_3_counter += 1
+    test_num += 5   
     five_mult_total += test_num
-    if (divide_by_3_counter == 3): #done by using an if != 3 in assembly
-        divide_by_3_counter = 0
-        five_mult_total = five_mult_total - test_num
+    if (divide_by_3_counter >= 2): 
+        test_num +=5
+        divide_by_3_counter=0
     
         
     

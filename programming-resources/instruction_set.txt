@@ -3,7 +3,7 @@ store, copy, and, or, not, add,
 subtract, zero, -1, 1,
 negative, increment, decrement
 
-store 15 bit number in address register: 1xxxxxxxxxxxxxxx
+store 15 bit number in address register: 0xxxxxxxxxxxxxxx
 
 for computation instructions:
 bits 0,1,2 are jump condition (less than, equal, greater than)
@@ -16,7 +16,7 @@ the upper bits are as follows:
 copy:
 copy d: 1000001010adrgel
 copy address: 1000100010adrgel
-copy ram: 1001100010dadrgel
+copy ram: 1001100010adrgel
 
 and:
 d&a: 1000000000adrgel
