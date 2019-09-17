@@ -1,0 +1,32 @@
+rom(0)<=x"0000"; --store 0 in RAM(0)
+rom(1)<=x"8a88";
+rom(2)<=x"0001"; --store 0 in RAM(1)
+rom(3)<=x"8a88";
+rom(4)<=x"0002"; --store 0 in RAM(2)
+rom(5)<=x"8a88";
+rom(6)<=x"0003"; --store 0 in RAM(3)
+rom(7)<=x"8a88";
+
+rom(8)<=x"0000"; --test_num loop 1 start
+rom(9)<=x"9890"; --copy RAM to data
+rom(10)<=x"0001"; --access RAM(1)
+rom(11)<=x"9088"; --data+RAM to RAM
+rom(12)<=x"0003"; 
+rom(13)<=x"8090"; --data+3 to data
+rom(14)<=x"0000";
+rom(15)<=x"8288"; --copy data to RAM
+rom(16)<=x"0000";
+rom(17)<=x"0000";
+rom(18)<=x"0000";
+rom(19)<=x"0000";
+rom(0)<=x"0000";
+rom(1)<=x"0000";
+rom(2)<=x"0000";
+rom(3)<=x"0000";
+rom(4)<=x"0000";
+rom(5)<=x"0000";
+rom(6)<=x"0000";
+rom(7)<=x"0000";
+rom(8)<=x"0000";
+rom(9)<=x"0000";
+

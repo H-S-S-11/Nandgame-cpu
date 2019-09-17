@@ -1,0 +1,48 @@
+--The benchmark to beat is 11,000 cycles to get the answer
+
+store 0 in RAM(0) --test num
+store 0 in RAM(1) --three mult total
+store 0 in RAM(2) --five mult total
+store 0 in RAM(3) --divide by 3 counter
+
+(test_num loop 1 start)
+load RAM(0) to data
+add: data+RAM(1) to RAM(1)
+add: data+3 to data
+store data to RAM(0)
+subtract: data-100 to data, loop if data<0
+
+store 0 in RAM(0)
+
+(test_num loop 2 start)
+increment RAM(3)
+load RAM(0) to data
+add: data + 5 to data
+add: data + RAM(2) to RAM(2)
+store data to RAM(0)
+
+--loop if test_num-95<0 AND divide_by_3_counter - 2 < 0
+subtract: data-95 to data
+store data to RAM(4) -- "test_num-95"
+load RAM(3) to data
+subtract: data-2 to data
+and: data & RAM(4) to data, loop if < 0
+
+store 0 in RAM(3)
+load RAM(0) to data
+add: data + 5 to data
+store data to RAM(0)
+
+subtract: data-95 to data, loop if data <0
+
+load RAM(1) to data
+add: data+RAM(2) to address
+
+store 0 in address 2 times (end of program)
+
+
+
+
+
+
+
