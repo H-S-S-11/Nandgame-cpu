@@ -1,4 +1,5 @@
 --The benchmark to beat is 11,000 cycles to get the answer
+--The correct answer, 0x090E, was obtained in 795 cycles (first time!)
 
 store 0 in RAM(0) --test num
 store 0 in RAM(1) --three mult total
