@@ -19,6 +19,7 @@ architecture structure of cpu is
 signal jump: std_logic;
 signal instruction: std_logic_vector(15 downto 0);
 
+
 component program_engine is
 port(
 	jump_address: in std_logic_vector(15 downto 0);
@@ -33,6 +34,7 @@ end component;
 component control_unit is
 port(
 	instruction: in std_logic_vector(15 downto 0);
+    pc: in std_logic_vector(15 downto 0);
     cl: in std_logic;
     
     a_reg: out std_logic_vector(15 downto 0);
@@ -57,6 +59,7 @@ instruction=>instruction
 cu1: control_unit
 port map(
 instruction=>instruction,
+pc=>pc,
 cl=>cl,
 a_reg=>a_reg,
 jump=>jump

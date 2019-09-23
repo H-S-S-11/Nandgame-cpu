@@ -1,6 +1,7 @@
 available instructions are:
-store, copy, and, or, not, add,
-subtract, zero, -1, 1,
+store, copy,
+bitwise and, or, not,
+add, subtract, zero, -1, 1,
 negative, increment, decrement
 
 store 15 bit number in address register: 0xxxxxxxxxxxxxxx
@@ -9,7 +10,11 @@ for computation instructions:
 bits 0,1,2 are jump condition (less than, equal, greater than)
 bit 3 means store in ram
 bit 4 means store in data register
-bit 5 means store in address register
+bit 5 means store in address registe
+bit 6 means not answer
+
+Extension 1: bit 13 now overrides bit 12 for the second alu source. If bit 13 is a 1, the Y input to the alu will be taken from the
+PC regardless of the state of bit 12.
 
 the upper bits are as follows:
 
@@ -18,13 +23,17 @@ copy d: 1000001010adrgel
 copy address: 1000100010adrgel
 copy ram: 1001100010adrgel
 
-and:
-d&a: 1000000000adrgel
-d&ram: 1001000000adrgel
+(n)and:
+d&a: 100000000nadrgel
+d&ram: 100100000nadrgel
 
 or:
 d|a: 1000010101adrgel
 d|ram: 1001010101adrgel
+
+nor:
+d|a: 1000010100adrgel
+d|ram: 1001010100adrgel
 
 not:
 not d: 1000011010adrgel

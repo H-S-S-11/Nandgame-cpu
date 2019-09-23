@@ -13,6 +13,7 @@ port(
     computation_instruction: out std_logic;
     
     sm: out std_logic; --source
+    s_pc: out std_logic; --to take source from pc instead of a or ram
     
     zx: out std_logic; --flags for alu
     nx: out std_logic;
@@ -43,6 +44,7 @@ word <= instruction when computation_instruction = '0' else
 		x"0000";
 
 sm <= (computation_instruction and instruction(12));
+s_pc <=(computation_instruction and instruction(13));
 
 zx <= (computation_instruction and instruction(11));
 nx <= (computation_instruction and instruction(10));

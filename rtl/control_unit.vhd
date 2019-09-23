@@ -9,6 +9,7 @@ use work.all;
 entity control_unit is
 port(
 	instruction: in std_logic_vector(15 downto 0);
+    pc: in std_logic_vector(15 downto 0);
     cl: in std_logic;
     
     a_reg: out std_logic_vector(15 downto 0);
@@ -37,6 +38,7 @@ architecture cu of control_unit is
         computation_instruction: out std_logic;
 
         sm: out std_logic; --source
+        s_pc: out std_logic; --take source from pc
 
         zx: out std_logic; --flags for alu
         nx: out std_logic;
@@ -91,6 +93,7 @@ architecture cu of control_unit is
 --decoder outputs-----
 signal computation_instruction: std_logic;
 signal sm: std_logic; --source
+signal s_pc: std_logic;
 
 signal zx: std_logic; --flags for alu
 signal nx: std_logic;
@@ -126,6 +129,7 @@ port map(
 instruction=>instruction,
 computation_instruction=>computation_instruction,
 sm=>sm,
+s_pc=>s_pc,
 zx=>zx,
 nx=>nx,
 zy=>zy,
@@ -175,7 +179,8 @@ d_reg=>d_reg,
 a_data=>a_data
 );
 
-alu_y_in <= a_reg when (sm='0') else
+alu_y_in <= pc when (s_pc='1') else
+            a_reg when (sm='0') else
 			a_data when (sm='1');
 
 memory_input <= word when (computation_instruction='0') else
