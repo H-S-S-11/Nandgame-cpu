@@ -22,33 +22,43 @@ copy:
 copy d: 1000001010adrgel
 copy address: 1000100010adrgel
 copy ram: 1001100010adrgel
+copy pc: 1010100010adrgel
+
 
 (n)and:
 d&a: 100000000nadrgel
 d&ram: 100100000nadrgel
+d&pc: 101000000nadrgel
 
 or:
 d|a: 1000010101adrgel
 d|ram: 1001010101adrgel
+d|pc: 1010010101adrgel
+
 
 nor:
-d|a: 1000010100adrgel
-d|ram: 1001010100adrgel
+not(d|a): 1000010100adrgel
+not(d|ram): 1001010100adrgel
+not(d|pc): 1010010100adrgel
 
 not:
 not d: 1000011010adrgel
 not a: 1000100110adrgel
 not ram: 1001100110adrgel
+not pc: 1010100110adrgel
 
 add:
 d+a: 1000000010adrgel
 d+ram: 1001000010adrgel
+d+pc: 1010000010adrgel
 
 subtract:
 d-a: 1000010011adrgel
 d-ram: 1001010011adrgel
+d-pc: 1010010011adrgel
 a-d: 1000000111adrgel
 ram-d: 1001000111adrgel
+pc-d: 1010000111adrgel
 
 zero: 1000101010adrgel
 -1: 1000111010adrgel
@@ -58,16 +68,19 @@ negative:
 -d: 1000001111adrgel
 -a: 1000110011adrgel
 -ram: 1001110011adrgel
+-pc: 1010110011adrgel
 
 increment:
 inc d: 1000011111adrgel
 inc a: 1000110111adrgel
 inc ram: 1001110111adrgel
+inc pc: 1010110111adrgel
 
 decrement:
 dec d: 1000001110adrgel
 dec a: 1000110010adrgel
 dec ram: 1001110010adrgel
+dec pc: 1010110010adrgel
 
 
 
