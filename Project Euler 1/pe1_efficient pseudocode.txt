@@ -1,11 +1,16 @@
 --The benchmark to beat is 11,000 cycles to get the answer
 --The correct answer, 0x090E, was obtained in 795 cycles (first time!)
 
+--J extension: this required more debugging and a slight code rewrite, but eventually the correct answer was obtained in 690 cycles
+--this shows a slight improvement as expected
+
 store 0 in RAM(0) --test num
 store 0 in RAM(1) --three mult total
 store 0 in RAM(2) --five mult total
 store 0 in RAM(3) --divide by 3 counter
 
+store jump address in a reg
+copy a to j
 (test_num loop 1 start)
 load RAM(0) to data
 add: data+RAM(1) to RAM(1)
@@ -15,6 +20,8 @@ subtract: data-100 to data, loop if data<0
 
 store 0 in RAM(0)
 
+store jump address in a reg
+copy a to j
 (test_num loop 2 start)
 increment RAM(3)
 load RAM(0) to data

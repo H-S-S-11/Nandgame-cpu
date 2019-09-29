@@ -12,7 +12,7 @@ port(
     pc: in std_logic_vector(15 downto 0);
     cl: in std_logic;
     
-    a_reg: out std_logic_vector(15 downto 0);
+    j_reg: out std_logic_vector(15 downto 0);
     jump: out std_logic
     );
 end control_unit;
@@ -50,6 +50,7 @@ architecture cu of control_unit is
         a:	out std_logic; --flags for memory
         d:	out std_logic;
         a_dereference: out std_logic;
+        j: out std_logic;
 
         greater_than: out std_logic; --flags for condition
         equal: out std_logic;
@@ -80,12 +81,14 @@ architecture cu of control_unit is
         a: in std_logic;
         d: in std_logic;
         a_dereference: in std_logic; --a is for address
+        j: in std_logic;
         x: in std_logic_vector(15 downto 0);
         cl: in std_logic;
 
         a_reg: out std_logic_vector(15 downto 0);
         d_reg: out std_logic_vector(15 downto 0);
-        a_data: out std_logic_vector(15 downto 0)
+        a_data: out std_logic_vector(15 downto 0);
+        j_reg: out std_logic_vector(15 downto 0)
 
     );
     end component;
@@ -105,6 +108,7 @@ signal no: std_logic;
 signal a: std_logic; --flags for memory
 signal d: std_logic;
 signal a_dereference: std_logic;
+signal j: std_logic;
 
 signal greater_than: std_logic; --flags for condition
 signal equal: std_logic;
@@ -118,6 +122,7 @@ signal alu_result: std_logic_vector(15 downto 0);
 --memory outputs
 signal d_reg: std_logic_vector(15 downto 0);
 signal a_data: std_logic_vector(15 downto 0);
+signal a_reg: std_logic_vector(15 downto 0);
 ---------------------
 signal memory_input: std_logic_vector(15 downto 0);
 signal alu_y_in: std_logic_vector(15 downto 0);
@@ -139,6 +144,7 @@ no=>no,
 a=>a,
 d=>d,
 a_dereference=>a_dereference,
+j=>j,
 greater_than=>greater_than,
 equal=>equal,
 less_than=>less_than,
@@ -172,11 +178,13 @@ port map(
 a=>a,
 d=>d,
 a_dereference=>a_dereference,
+j=>j,
 x=>memory_input,
 cl=>cl,
 a_reg=>a_reg,
 d_reg=>d_reg,
-a_data=>a_data
+a_data=>a_data,
+j_reg=>j_reg
 );
 
 alu_y_in <= pc when (s_pc='1') else

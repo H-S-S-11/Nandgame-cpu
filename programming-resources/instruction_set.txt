@@ -10,7 +10,8 @@ for computation instructions:
 bits 0,1,2 are jump condition (less than, equal, greater than)
 bit 3 means store in ram
 bit 4 means store in data register
-bit 5 means store in address registe
+bit 5 means store in address register
+bit 14 means store in jump register
 bit 6 means not answer
 
 Extension 1: bit 13 now overrides bit 12 for the second alu source. If bit 13 is a 1, the Y input to the alu will be taken from the
@@ -19,68 +20,68 @@ PC regardless of the state of bit 12.
 the upper bits are as follows:
 
 copy:
-copy d: 1000001010adrgel
-copy address: 1000100010adrgel
-copy ram: 1001100010adrgel
-copy pc: 1010100010adrgel
+copy d: 1j00001010adrgel
+copy address: 1j00100010adrgel
+copy ram: 1j01100010adrgel
+copy pc: 1j10100010adrgel
 
 
 (n)and:
-d&a: 100000000nadrgel
-d&ram: 100100000nadrgel
-d&pc: 101000000nadrgel
+d&a: 1j0000000nadrgel
+d&ram: 1j0100000nadrgel
+d&pc: 1j1000000nadrgel
 
 or:
-d|a: 1000010101adrgel
-d|ram: 1001010101adrgel
-d|pc: 1010010101adrgel
+d|a: 1j00010101adrgel
+d|ram: 1j01010101adrgel
+d|pc: 1j10010101adrgel
 
 
 nor:
-not(d|a): 1000010100adrgel
-not(d|ram): 1001010100adrgel
-not(d|pc): 1010010100adrgel
+not(d|a): 1j00010100adrgel
+not(d|ram): 1j01010100adrgel
+not(d|pc): 1j10010100adrgel
 
 not:
-not d: 1000011010adrgel
-not a: 1000100110adrgel
-not ram: 1001100110adrgel
-not pc: 1010100110adrgel
+not d: 1j00011010adrgel
+not a: 1j00100110adrgel
+not ram: 1j01100110adrgel
+not pc: 1j10100110adrgel
 
 add:
-d+a: 1000000010adrgel
-d+ram: 1001000010adrgel
-d+pc: 1010000010adrgel
+d+a: 1j00000010adrgel
+d+ram: 1j01000010adrgel
+d+pc: 1j10000010adrgel
 
 subtract:
-d-a: 1000010011adrgel
-d-ram: 1001010011adrgel
-d-pc: 1010010011adrgel
-a-d: 1000000111adrgel
-ram-d: 1001000111adrgel
-pc-d: 1010000111adrgel
+d-a: 1j00010011adrgel
+d-ram: 1j01010011adrgel
+d-pc: 1j10010011adrgel
+a-d: 1j00000111adrgel
+ram-d: 1j01000111adrgel
+pc-d: 1j10000111adrgel
 
-zero: 1000101010adrgel
--1: 1000111010adrgel
-1: 1000111111adrgel
+zero: 1j00101010adrgel
+-1: 1j00111010adrgel
+1: 1j00111111adrgel
 
 negative:
--d: 1000001111adrgel
--a: 1000110011adrgel
--ram: 1001110011adrgel
--pc: 1010110011adrgel
+-d: 1j00001111adrgel
+-a: 1j00110011adrgel
+-ram: 1j01110011adrgel
+-pc: 1j10110011adrgel
 
 increment:
-inc d: 1000011111adrgel
-inc a: 1000110111adrgel
-inc ram: 1001110111adrgel
-inc pc: 1010110111adrgel
+inc d: 1j00011111adrgel
+inc a: 1j00110111adrgel
+inc ram: 1j01110111adrgel
+inc pc: 1j10110111adrgel
 
 decrement:
-dec d: 1000001110adrgel
-dec a: 1000110010adrgel
-dec ram: 1001110010adrgel
-dec pc: 1010110010adrgel
+dec d: 1j00001110adrgel
+dec a: 1j00110010adrgel
+dec ram: 1j01110010adrgel
+dec pc: 1j10110010adrgel
 
 
 

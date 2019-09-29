@@ -1,6 +1,7 @@
 --the ROM
 --put program in here
 --this program demonstrates the ability to read the pc
+--this code will no longer work with the j extension
 
 library IEEE;
 use IEEE.std_logic_1164.all;

@@ -25,6 +25,7 @@ port(
     a:	out std_logic; --flags for memory
     d:	out std_logic;
     a_dereference: out std_logic;
+    j: out std_logic;
     
     greater_than: out std_logic; --flags for condition
     equal: out std_logic;
@@ -56,6 +57,7 @@ no <= (computation_instruction and instruction(6));
 a <= ((computation_instruction and instruction(5)) or (not computation_instruction));
 d <= (computation_instruction and instruction(4));
 a_dereference <= (computation_instruction and instruction(3));
+j <= (computation_instruction and instruction(14));
 
 greater_than <= (computation_instruction and instruction(2));
 equal <= (computation_instruction and instruction(1));

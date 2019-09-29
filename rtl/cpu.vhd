@@ -9,7 +9,7 @@ entity cpu is
 port(
 	cl: in std_logic;
     pc: out std_logic_vector(15 downto 0);
-    a_reg: out std_logic_vector(15 downto 0);
+    j_reg: out std_logic_vector(15 downto 0);
     pc_reset: in std_logic
 );
 end cpu;
@@ -37,7 +37,7 @@ port(
     pc: in std_logic_vector(15 downto 0);
     cl: in std_logic;
     
-    a_reg: out std_logic_vector(15 downto 0);
+    j_reg: out std_logic_vector(15 downto 0);
     jump: out std_logic
     );
 end component;    
@@ -48,7 +48,7 @@ begin
 
 pe1: program_engine
 port map(
-jump_address=>a_reg,
+jump_address=>j_reg,
 jump=>jump,
 cl=>cl,
 counter_reset=>pc_reset,
@@ -61,7 +61,7 @@ port map(
 instruction=>instruction,
 pc=>pc,
 cl=>cl,
-a_reg=>a_reg,
+j_reg=>j_reg,
 jump=>jump
 );
 

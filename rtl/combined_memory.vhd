@@ -11,12 +11,14 @@ port(
 	a: in std_logic;
     d: in std_logic;
     a_dereference: in std_logic;
+    j: in std_logic;
     x: in std_logic_vector(15 downto 0);
     cl: in std_logic;
 
 	a_reg: out std_logic_vector(15 downto 0);
     d_reg: out std_logic_vector(15 downto 0);
-    a_data: out std_logic_vector(15 downto 0)
+    a_data: out std_logic_vector(15 downto 0);
+    j_reg: out std_logic_vector(15 downto 0)
     
 );
 end memory;
@@ -43,6 +45,9 @@ if (cl'event and (cl='1')) then
 	end if;
     if (a_dereference='1') then
     	memory(address)<=X;
+    end if;
+    if (j='1') then
+        j_reg<=X;
     end if;
 end if;
 
