@@ -17,67 +17,75 @@ bit 6 means not answer
 Extension 1: bit 13 now overrides bit 12 for the second alu source. If bit 13 is a 1, the Y input to the alu will be taken from the
 PC regardless of the state of bit 12.
 
-the upper bits are as follows:
+sources are given without commas
+eg cp d, cp a, cp r, cp pc for copy
 
-copy:
+the upper bits are as follows, () give instructions
+understood by the assembler:
+
+copy (cp, copy):
 copy d: 1j00001010adrgel
 copy address: 1j00100010adrgel
 copy ram: 1j01100010adrgel
 copy pc: 1j10100010adrgel
 
 
-(n)and:
+(n)and (nand/and):
 d&a: 1j0000000nadrgel
 d&ram: 1j0100000nadrgel
 d&pc: 1j1000000nadrgel
 
-or:
+or (or):
 d|a: 1j00010101adrgel
 d|ram: 1j01010101adrgel
 d|pc: 1j10010101adrgel
+only the second source is needed,
+eg or a
 
 
-nor:
+nor (nor):
 not(d|a): 1j00010100adrgel
 not(d|ram): 1j01010100adrgel
 not(d|pc): 1j10010100adrgel
 
-not:
+not (no, not):
 not d: 1j00011010adrgel
 not a: 1j00100110adrgel
 not ram: 1j01100110adrgel
 not pc: 1j10100110adrgel
 
-add:
+add (add):
 d+a: 1j00000010adrgel
 d+ram: 1j01000010adrgel
 d+pc: 1j10000010adrgel
 
-subtract:
+subtract (sub):
 d-a: 1j00010011adrgel
 d-ram: 1j01010011adrgel
 d-pc: 1j10010011adrgel
 a-d: 1j00000111adrgel
 ram-d: 1j01000111adrgel
 pc-d: 1j10000111adrgel
+here the full source is needed,
+eg sub d-a
 
-zero: 1j00101010adrgel
+zero (zero): 1j00101010adrgel
 -1: 1j00111010adrgel
 1: 1j00111111adrgel
 
-negative:
+negative (neg):
 -d: 1j00001111adrgel
 -a: 1j00110011adrgel
 -ram: 1j01110011adrgel
 -pc: 1j10110011adrgel
 
-increment:
+increment (inc):
 inc d: 1j00011111adrgel
 inc a: 1j00110111adrgel
 inc ram: 1j01110111adrgel
 inc pc: 1j10110111adrgel
 
-decrement:
+decrement (dec):
 dec d: 1j00001110adrgel
 dec a: 1j00110010adrgel
 dec ram: 1j01110010adrgel

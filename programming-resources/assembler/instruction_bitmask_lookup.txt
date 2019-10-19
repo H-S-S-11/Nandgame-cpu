@@ -1,0 +1,6 @@
+//Gives a hex bitmask to be ORed:
+//With 0x00 then  the arg bitmask:
+cp d, copy d; 0x8280:
+cp a, copy a; 0x8880:
+cp r, copy r; 0x9880:
+cp pc, copy pc; 0xa880:
