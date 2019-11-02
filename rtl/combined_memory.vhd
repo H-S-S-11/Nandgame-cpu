@@ -1,5 +1,5 @@
 --address register, data register and 64*2K of RAM
---the _data suffix is used like a * dereference
+--the _dereference suffix is used with the meaning of a * in C
 library IEEE;
 library work;
 use IEEE.std_logic_1164.all;

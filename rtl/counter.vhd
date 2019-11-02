@@ -42,10 +42,10 @@ begin
 	process(cl)
     begin
     if (cl'event and (cl='1')) then
-    	if st = '1' then
-        	q <= x;
-         elsif sync_reset = '1' then
+        if sync_reset = '1' then
          	q <= x"0000";
+        elsif st = '1' then
+        	q <= x;
          else
     		q <= plus_one;
          end if;
