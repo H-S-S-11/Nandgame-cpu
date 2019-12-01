@@ -19,6 +19,7 @@ end program_engine;
 
 architecture pe of program_engine is
 
+signal pc_wire: std_logic_vector(15 downto 0);
 
 
 component counter is
@@ -41,18 +42,20 @@ end component;
 
 begin
 
+pc<=pc_wire;
+
 count1: counter
 port map(
 x=>jump_address,
 st=>jump,
 cl=>cl,
 sync_reset=>counter_reset,
-q=>pc
+q=>pc_wire
 );
 
 rom1: rom
 port map(
-pc=>pc,
+pc=>pc_wire,
 instruction=>instruction
 );
 

@@ -1,4 +1,4 @@
---address register, data register and 64*2K of RAM
+--address_int register, data register and 64*2K of RAM
 --the _dereference suffix is used with the meaning of a * in C
 library IEEE;
 library work;
@@ -27,24 +27,26 @@ architecture combined_memory of memory is
 
 type sixteen_bit_memory_block is array(65535 downto 0) of std_logic_vector(15 downto 0);
 signal memory: sixteen_bit_memory_block;
-signal address: integer range 0 to 65535;
+signal address: std_logic_vector(15 downto 0);
+signal address_int: integer range 0 to 65535;
 
 begin
 
-address<=to_integer(unsigned(a_reg));
-a_data<=memory(address);
+address_int<=to_integer(unsigned(address));
+a_data<=memory(address_int);
+a_reg<=address;
 
 process(cl)
 begin
 if (cl'event and (cl='1')) then 
 	if (a='1') then
-    	a_reg<=X;
+    	address<=X;
 	end if;
     if (d='1') then
     	d_reg<=X;
 	end if;
     if (a_dereference='1') then
-    	memory(address)<=X;
+    	memory(address_int)<=X;
     end if;
     if (j='1') then
         j_reg<=X;

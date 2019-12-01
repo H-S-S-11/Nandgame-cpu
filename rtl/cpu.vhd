@@ -18,6 +18,8 @@ architecture structure of cpu is
 
 signal jump: std_logic;
 signal instruction: std_logic_vector(15 downto 0);
+signal j_reg_wire: std_logic_vector(15 downto 0);
+signal pc_wire: std_logic_vector(15 downto 0);
 
 
 component program_engine is
@@ -48,22 +50,25 @@ begin
 
 pe1: program_engine
 port map(
-jump_address=>j_reg,
+jump_address=>j_reg_wire,
 jump=>jump,
 cl=>cl,
 counter_reset=>pc_reset,
-pc=>pc,
+pc=>pc_wire,
 instruction=>instruction
 );
     
 cu1: control_unit
 port map(
 instruction=>instruction,
-pc=>pc,
+pc=>pc_wire,
 cl=>cl,
-j_reg=>j_reg,
+j_reg=>j_reg_wire,
 jump=>jump
 );
+
+j_reg<=j_reg_wire;
+pc<=pc_wire;
 
 end structure;    
     
