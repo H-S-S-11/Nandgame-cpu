@@ -11,6 +11,7 @@ port(
     pc: out std_logic_vector(15 downto 0);
     j_reg: out std_logic_vector(15 downto 0);
     d_reg_o: out std_logic_vector(15 downto 0);
+    seven_seg_o: out std_logic_vector(15 downto 0);
     pc_reset: in std_logic
 );
 end cpu;
@@ -42,6 +43,7 @@ port(
     
     j_reg: out std_logic_vector(15 downto 0);
     d_reg_o: out std_logic_vector(15 downto 0);
+    seven_seg_o: out std_logic_vector(15 downto 0);
     jump: out std_logic
     );
 end component;    
@@ -67,6 +69,7 @@ pc=>pc_wire,
 cl=>cl,
 j_reg=>j_reg_wire,
 d_reg_o=>d_reg_o,
+seven_seg_o=>seven_seg_o,
 jump=>jump
 );
 

@@ -14,6 +14,7 @@ port(
     
     j_reg: out std_logic_vector(15 downto 0);
     d_reg_o: out std_logic_vector(15 downto 0);
+    seven_seg_o: out std_logic_vector(15 downto 0);
     jump: out std_logic
     );
 end control_unit;
@@ -89,7 +90,8 @@ architecture cu of control_unit is
         a_reg: out std_logic_vector(15 downto 0);
         d_reg: out std_logic_vector(15 downto 0);
         a_data: out std_logic_vector(15 downto 0);
-        j_reg: out std_logic_vector(15 downto 0)
+        j_reg: out std_logic_vector(15 downto 0);
+        seven_seg: out std_logic_vector(15 downto 0)
 
     );
     end component;
@@ -185,7 +187,8 @@ cl=>cl,
 a_reg=>a_reg,
 d_reg=>d_reg,
 a_data=>a_data,
-j_reg=>j_reg
+j_reg=>j_reg,
+seven_seg=>seven_seg_o
 );
 
 alu_y_in <= pc when (s_pc='1') else
