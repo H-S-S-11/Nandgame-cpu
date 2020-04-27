@@ -13,6 +13,7 @@ port(
     cl: in std_logic;
     
     j_reg: out std_logic_vector(15 downto 0);
+    d_reg_o: out std_logic_vector(15 downto 0);
     jump: out std_logic
     );
 end control_unit;
@@ -193,5 +194,7 @@ alu_y_in <= pc when (s_pc='1') else
 
 memory_input <= word when (computation_instruction='0') else
 				alu_result when (computation_instruction='1');
+
+d_reg_o <= d_reg;
 
 end cu;

@@ -46,7 +46,9 @@ subtract: data-95 to data, loop if data <0
 load RAM(1) to data
 add: data+RAM(2) to address
 
-store 0 in address 2 times (end of program)
+store: a to j
+store: a to d
+load imm: zero to a
 
 
 

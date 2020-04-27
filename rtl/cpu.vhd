@@ -10,6 +10,7 @@ port(
 	cl: in std_logic;
     pc: out std_logic_vector(15 downto 0);
     j_reg: out std_logic_vector(15 downto 0);
+    d_reg_o: out std_logic_vector(15 downto 0);
     pc_reset: in std_logic
 );
 end cpu;
@@ -40,6 +41,7 @@ port(
     cl: in std_logic;
     
     j_reg: out std_logic_vector(15 downto 0);
+    d_reg_o: out std_logic_vector(15 downto 0);
     jump: out std_logic
     );
 end component;    
@@ -64,6 +66,7 @@ instruction=>instruction,
 pc=>pc_wire,
 cl=>cl,
 j_reg=>j_reg_wire,
+d_reg_o=>d_reg_o,
 jump=>jump
 );
 

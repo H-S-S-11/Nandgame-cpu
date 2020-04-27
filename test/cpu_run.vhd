@@ -16,11 +16,12 @@ port(
 	cl: in std_logic;
   pc: out std_logic_vector(15 downto 0);
   j_reg: out std_logic_vector(15 downto 0);
+  d_reg_o: out std_logic_vector(15 downto 0);
   pc_reset: in std_logic
 );
 end component;
 
-signal pc_out, j_reg_out: std_logic_vector(15 downto 0);
+signal pc_out, j_reg_out, d_reg_out: std_logic_vector(15 downto 0);
 signal reset_in: std_logic;
 signal cl_in: std_logic;
 
@@ -31,6 +32,7 @@ port map(
 cl=>cl_in,
 pc=>pc_out,
 j_reg=>j_reg_out,
+d_reg_o=>d_reg_out,
 pc_reset=>reset_in
 );
 
