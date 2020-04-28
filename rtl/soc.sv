@@ -1,7 +1,7 @@
 // A SystemVerilog wrapper for the Nandgame CPU, making it easier to extend with other modules
 
 module soc(
-    input logic clk, p_sync_reset, byte_sel
+    input logic clk, p_sync_reset, byte_select_i,
     output logic [7:0] leds_o
 );
 
@@ -17,6 +17,6 @@ cpu core1
     .pc_reset(p_sync_reset)
 );
 
-assign leds_o = byte_select ? ~seven_seg_i[15:8] : ~seven_seg_i[7:0];
+assign leds_o = byte_select_i ? ~seven_seg_i[15:8] : ~seven_seg_i[7:0];
 
 endmodule
