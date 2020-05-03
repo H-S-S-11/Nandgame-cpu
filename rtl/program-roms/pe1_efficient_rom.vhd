@@ -48,7 +48,7 @@ rom(14)<=x"0003";
 rom(15)<=x"8090"; --data+3 to data
 rom(16)<=x"0000";
 rom(17)<=x"8288"; --copy data to RAM
-rom(18)<=x"0064";  
+rom(18)<=x"0111"; --load 100 in a (changed to 273)
 rom(19)<=x"84d1"; --data - a to data, jump if <0
 
 rom(20)<=x"0000";
@@ -67,7 +67,7 @@ rom(31)<=x"9088"; --data + RAM(2) to RAM(2)
 
 rom(32)<=x"0000";
 rom(33)<=x"8288"; --copy data to RAM(0)
-rom(34)<=x"005f"; --load 95 to a
+rom(34)<=x"010c"; --load 95 to a (CHANGED TO 268)
 rom(35)<=x"84d0"; --data - a to data
 rom(36)<=x"0004";
 rom(37)<=x"8288"; --copy data to RAM(4)
@@ -88,7 +88,7 @@ rom(49)<=x"8090"; --data+5 to data
 
 rom(50)<=x"0000";
 rom(51)<=x"8288"; --copy data to RAM(0)
-rom(52)<=x"005f"; --load 95 to a
+rom(52)<=x"010c"; --load 95 to a (CHANGED TO 268)
 rom(53)<=x"84d1"; --data - a to data, jump if d<0
 
 
