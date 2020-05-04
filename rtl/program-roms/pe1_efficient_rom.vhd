@@ -1,6 +1,8 @@
 --the ROM
 --put program in here
 --uses j extension
+--this version goes from 1 to 273 (non inclusive)
+--so the expected answer is 17145 or 0x42f9
 
 library IEEE;
 use IEEE.std_logic_1164.all;
