@@ -15,7 +15,13 @@ port(
     j_reg: out std_logic_vector(15 downto 0);
     d_reg_o: out std_logic_vector(15 downto 0);
     seven_seg_o: out std_logic_vector(15 downto 0);
-    jump: out std_logic
+    jump: out std_logic;
+
+    --for memory mapped io outside the core. io is mapped at 0x4000 and above
+    io_store_o: out std_logic;
+    io_address_o: out std_logic_vector(13 downto 0);
+    alu_o: out std_logic_vector(15 downto 0);
+    io_data_i: in std_logic_vector(15 downto 0)
     );
 end control_unit;
     
@@ -124,7 +130,7 @@ signal alu_result: std_logic_vector(15 downto 0);
 
 --memory outputs
 signal d_reg: std_logic_vector(15 downto 0);
-signal a_data: std_logic_vector(15 downto 0);
+signal ram_data: std_logic_vector(15 downto 0);
 signal a_reg: std_logic_vector(15 downto 0);
 ---------------------
 signal memory_input: std_logic_vector(15 downto 0);
@@ -186,18 +192,23 @@ x=>memory_input,
 cl=>cl,
 a_reg_o=>a_reg,
 d_reg=>d_reg,
-a_data=>a_data,
+a_data=>ram_data,
 j_reg=>j_reg,
 seven_seg=>seven_seg_o
 );
 
 alu_y_in <= pc when (s_pc='1') else
             a_reg when (sm='0') else
-			a_data when (sm='1');
+            ram_data when (sm='1' and a_reg(14)='0') else
+            io_data_i when (sm='1' and a_reg(14)='1');
 
 memory_input <= word when (computation_instruction='0') else
 				alu_result when (computation_instruction='1');
 
 d_reg_o <= d_reg;
+
+io_store_o<=a_reg(14);
+io_address_o<=a_reg(13 downto 0);
+alu_o<=alu_result;
 
 end cu;

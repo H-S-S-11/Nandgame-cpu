@@ -12,7 +12,13 @@ port(
     j_reg: out std_logic_vector(15 downto 0);
     d_reg_o: out std_logic_vector(15 downto 0);
     seven_seg_o: out std_logic_vector(15 downto 0);
-    pc_reset: in std_logic
+    pc_reset: in std_logic;
+
+    --for memory mapped io outside the core. io is mapped at 0x4000 and above
+    io_store_o: out std_logic;
+    io_address_o: out std_logic_vector(13 downto 0);
+    alu_o: out std_logic_vector(15 downto 0);
+    io_data_i: in std_logic_vector(15 downto 0)
 );
 end cpu;
 
@@ -44,7 +50,13 @@ port(
     j_reg: out std_logic_vector(15 downto 0);
     d_reg_o: out std_logic_vector(15 downto 0);
     seven_seg_o: out std_logic_vector(15 downto 0);
-    jump: out std_logic
+    jump: out std_logic;
+
+    --for memory mapped io outside the core. io is mapped at 0x4000 and above
+    io_store_o: out std_logic;
+    io_address_o: out std_logic_vector(13 downto 0);
+    alu_o: out std_logic_vector(15 downto 0);
+    io_data_i: in std_logic_vector(15 downto 0)
     );
 end component;    
     
@@ -70,7 +82,13 @@ cl=>cl,
 j_reg=>j_reg_wire,
 d_reg_o=>d_reg_o,
 seven_seg_o=>seven_seg_o,
-jump=>jump
+jump=>jump,
+
+--for memory mapped io
+io_store_o=>io_store_o,
+io_address_o=>io_address_o,
+alu_o=>alu_o,
+io_data_i=>io_data_i
 );
 
 j_reg<=j_reg_wire;
