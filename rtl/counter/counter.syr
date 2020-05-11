@@ -1,0 +1,409 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: counter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "counter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "counter"
+Output Format                      : NGC
+Target Device                      : xc5vlx50t-1-ff1136
+
+---- Source Options
+Top Module Name                    : counter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Off
+Reduce Control Sets                : Off
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/ise/Quartus_projects/Nandgame-cpu/rtl/full_adder.vhd" in Library work.
+Entity <full_adder> compiled.
+Entity <full_adder> (Architecture <addition>) compiled.
+Compiling vhdl file "/home/ise/Quartus_projects/Nandgame-cpu/rtl/16_bit_adder.vhd" in Library work.
+Entity <add_16> compiled.
+Entity <add_16> (Architecture <add>) compiled.
+Compiling vhdl file "/home/ise/Quartus_projects/Nandgame-cpu/rtl/counter.vhd" in Library work.
+Entity <counter> compiled.
+Entity <counter> (Architecture <count_arch>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <counter> in library <work> (architecture <count_arch>).
+
+Analyzing hierarchy for entity <add_16> in library <work> (architecture <add>).
+
+Analyzing hierarchy for entity <full_adder> in library <work> (architecture <addition>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <counter> in library <work> (Architecture <count_arch>).
+WARNING:Xst:753 - "/home/ise/Quartus_projects/Nandgame-cpu/rtl/counter.vhd" line 35: Unconnected output port 'output_c' of component 'add_16'.
+Entity <counter> analyzed. Unit <counter> generated.
+
+Analyzing Entity <add_16> in library <work> (Architecture <add>).
+Entity <add_16> analyzed. Unit <add_16> generated.
+
+Analyzing Entity <full_adder> in library <work> (Architecture <addition>).
+Entity <full_adder> analyzed. Unit <full_adder> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <full_adder>.
+    Related source file is "/home/ise/Quartus_projects/Nandgame-cpu/rtl/full_adder.vhd".
+    Found 1-bit xor2 for signal <l>.
+    Found 1-bit xor2 for signal <a_b_lsb>.
+Unit <full_adder> synthesized.
+
+
+Synthesizing Unit <add_16>.
+    Related source file is "/home/ise/Quartus_projects/Nandgame-cpu/rtl/16_bit_adder.vhd".
+Unit <add_16> synthesized.
+
+
+Synthesizing Unit <counter>.
+    Related source file is "/home/ise/Quartus_projects/Nandgame-cpu/rtl/counter.vhd".
+    Found 16-bit register for signal <count>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <counter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 16-bit register                                       : 1
+# Xors                                                 : 32
+ 1-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+# Xors                                                 : 32
+ 1-bit xor2                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <counter> ...
+
+Optimizing unit <add_16> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block counter, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : counter.ngr
+Top Level Output File Name         : counter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 35
+
+Cell Usage :
+# BELS                             : 31
+#      LUT2                        : 4
+#      LUT3                        : 5
+#      LUT4                        : 4
+#      LUT5                        : 3
+#      LUT6                        : 14
+#      MUXF7                       : 1
+# FlipFlops/Latches                : 16
+#      FDR                         : 16
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 18
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx50tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              16  out of  28800     0%  
+ Number of Slice LUTs:                   30  out of  28800     0%  
+    Number used as Logic:                30  out of  28800     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     30
+   Number with an unused Flip Flop:      14  out of     30    46%  
+   Number with an unused LUT:             0  out of     30     0%  
+   Number of fully used LUT-FF pairs:    16  out of     30    53%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          35
+ Number of bonded IOBs:                  35  out of    480     7%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+cl                                 | BUFGP                  | 16    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.320ns (Maximum Frequency: 431.034MHz)
+   Minimum input arrival time before clock: 2.916ns
+   Maximum output required time after clock: 3.314ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cl'
+  Clock period: 2.320ns (frequency: 431.034MHz)
+  Total number of paths / destination ports: 138 / 16
+-------------------------------------------------------------------------
+Delay:               2.320ns (Levels of Logic = 2)
+  Source:            count_13 (FF)
+  Destination:       count_14 (FF)
+  Source Clock:      cl rising
+  Destination Clock: cl rising
+
+  Data Path: count_13 to count_14
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.471   1.085  count_13 (count_13)
+     LUT6:I0->O            1   0.094   0.576  increment/add12/Mxor_l_Result11_SW2 (N14)
+     LUT6:I4->O            1   0.094   0.000  count_mux0002<14>1 (count_mux0002<14>)
+     FDR:D                    -0.018          count_14
+    ----------------------------------------
+    Total                      2.320ns (0.659ns logic, 1.661ns route)
+                                       (28.4% logic, 71.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cl'
+  Total number of paths / destination ports: 52 / 32
+-------------------------------------------------------------------------
+Offset:              2.916ns (Levels of Logic = 4)
+  Source:            x<15> (PAD)
+  Destination:       count_15 (FF)
+  Destination Clock: cl rising
+
+  Data Path: x<15> to count_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.818   1.080  x_15_IBUF (x_15_IBUF)
+     LUT6:I0->O            1   0.094   0.000  increment/add12/Mxor_l_Result11_SW4_G (N28)
+     MUXF7:I1->O           1   0.254   0.576  increment/add12/Mxor_l_Result11_SW4 (N23)
+     LUT6:I4->O            1   0.094   0.000  count_mux0002<15> (count_mux0002<15>)
+     FDR:D                    -0.018          count_15
+    ----------------------------------------
+    Total                      2.916ns (1.260ns logic, 1.656ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cl'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.314ns (Levels of Logic = 1)
+  Source:            count_6 (FF)
+  Destination:       q<6> (PAD)
+  Source Clock:      cl rising
+
+  Data Path: count_6 to q<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.471   0.391  count_6 (count_6)
+     OBUF:I->O                 2.452          q_6_OBUF (q<6>)
+    ----------------------------------------
+    Total                      3.314ns (2.923ns logic, 0.391ns route)
+                                       (88.2% logic, 11.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.08 secs
+ 
+--> 
+
+
+Total memory usage is 641836 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

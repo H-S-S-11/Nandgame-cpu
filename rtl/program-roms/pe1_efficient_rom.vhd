@@ -101,7 +101,7 @@ rom(57)<=x"90a0"; --data+RAM(2) to a
 
 rom(58)<=x"c880"; --a to j
 rom(59)<=x"8890"; --a to data
-rom(60)<=x"7fff";
+rom(60)<=x"3fff"; --sevenseg address
 rom(61)<=x"8288"; --data to sevenseg
 rom(62)<=x"0000"; --end of program
 

@@ -1,0 +1,3 @@
+vhdl work "/home/ise/Quartus_projects/Nandgame-cpu/rtl/full_adder.vhd"
+vhdl work "/home/ise/Quartus_projects/Nandgame-cpu/rtl/16_bit_adder.vhd"
+vhdl work "/home/ise/Quartus_projects/Nandgame-cpu/rtl/counter.vhd"

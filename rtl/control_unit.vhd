@@ -87,7 +87,7 @@ architecture cu of control_unit is
         x: in std_logic_vector(15 downto 0);
         cl: in std_logic;
 
-        a_reg: out std_logic_vector(15 downto 0);
+        a_reg_o: out std_logic_vector(15 downto 0);
         d_reg: out std_logic_vector(15 downto 0);
         a_data: out std_logic_vector(15 downto 0);
         j_reg: out std_logic_vector(15 downto 0);
@@ -184,7 +184,7 @@ a_dereference=>a_dereference,
 j=>j,
 x=>memory_input,
 cl=>cl,
-a_reg=>a_reg,
+a_reg_o=>a_reg,
 d_reg=>d_reg,
 a_data=>a_data,
 j_reg=>j_reg,
