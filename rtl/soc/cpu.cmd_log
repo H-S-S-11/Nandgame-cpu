@@ -1,4 +1,0 @@
-xst -intstyle ise -ifn "/home/ise/Quartus_projects/Nandgame-cpu/rtl/soc/cpu.xst" -ofn "/home/ise/Quartus_projects/Nandgame-cpu/rtl/soc/cpu.syr" 
-xst -intstyle ise -ifn "/home/ise/Quartus_projects/Nandgame-cpu/rtl/soc/cpu.xst" -ofn "/home/ise/Quartus_projects/Nandgame-cpu/rtl/soc/cpu.syr" 
-xst -intstyle ise -ifn "/home/ise/Quartus_projects/Nandgame-cpu/rtl/soc/cpu.xst" -ofn "/home/ise/Quartus_projects/Nandgame-cpu/rtl/soc/cpu.syr" 
-xst -intstyle ise -ifn "/home/ise/Quartus_projects/Nandgame-cpu/rtl/soc/cpu.xst" -ofn "/home/ise/Quartus_projects/Nandgame-cpu/rtl/soc/cpu.syr" 

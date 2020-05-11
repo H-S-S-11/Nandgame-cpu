@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "/home/ise/Quartus_projects/Nandgame-cpu/rtl/counter/counter.xst" -ofn "/home/ise/Quartus_projects/Nandgame-cpu/rtl/counter/counter.syr" 

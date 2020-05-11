@@ -1,3 +1,0 @@
-vhdl work "../full_adder.vhd"
-vhdl work "../16_bit_adder.vhd"
-vhdl work "../counter.vhd"
